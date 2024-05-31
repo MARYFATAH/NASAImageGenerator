@@ -1,11 +1,15 @@
 // FetchImage.js
 
 import React, { useState, useEffect } from 'react';
+import ErrorComponent from './ErrorComponent';
+import LoadingComponent from './LoadingComponent';
+
 import './App.css'
 
 const FetchImage = () => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
+    
 
     useEffect(() => {
         const fetchDataFromNasa = async () => {
@@ -29,17 +33,23 @@ const FetchImage = () => {
     }, []);
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <div>
+            <ErrorComponent
+            title="Oops! Something went wrong."
+            message="We couldn't process your request. Please try again later."
+            />
+        </div>;
     }
 
     if (!data) {
-        return <div>Loading...</div>;
+        return <div>
+            <LoadingComponent message="Loading, please wait..." />
+        </div>;
     }
 
     return (
         <div>
             <div class="bg">
-                <h1>NASA</h1>
             </div>
             <div class="nft">
                 <div class='main'>
