@@ -47,14 +47,20 @@ const FetchImage = () => {
         </div>;
     }
 
+    const redirectToExternalPage = () => {
+    window.location.href = data.url;
+  };
+
     return (
         <div>
-            <div class="bg">
+            <div class="bg">     
             </div>
             <div class="nft">
                 <div class='main'>
                     <img class='tokenImage'  src={data.url} alt={data.title}  />
-                    <h2>{data.title}<br/>Date: {data.date}</h2>
+                    <h2>{data.title}</h2>
+                    <p><b>Date :</b> {data.date}</p>
+                    <button class='btn' onClick={redirectToExternalPage}>Go to Image Page</button>
                     <p class='description'> {data.explanation}</p>
                     <div class='tokenInfo'>
                     </div>

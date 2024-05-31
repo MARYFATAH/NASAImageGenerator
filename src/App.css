@@ -56,23 +56,23 @@ code {
   justify-content: space-between;
   align-items: center;
 }
-.nft .main .tokenInfo .price {
+.nft .main .tokenInfo  {
   display: flex;
   align-items: center;
   color: #ee83e5;
   font-weight: 700;
 }
-.nft .main .tokenInfo .price ins {
+.nft .main .tokenInfo  ins {
   margin-left: -0.3rem;
   margin-right: 0.5rem;
 }
-.nft .main .tokenInfo .duration {
+.nft .main .tokenInfo  {
   display: flex;
   align-items: center;
   color: #a89ec9;
   margin-right: 0.2rem;
 }
-.nft .main .tokenInfo .duration ins {
+.nft .main .tokenInfo  ins {
   margin: 0.5rem;
   margin-bottom: 0.4rem;
 }
@@ -135,4 +135,14 @@ code {
 .bg h1 {
   font-size: 20rem;
   filter: opacity(0.5);
+}
+
+.btn{
+  background-color:#a89ec9 ;
+  border: #eee;
+  font-size:  1rem; 
+  border-radius: 5px;
+  padding: 1rem;
+  margin:1rem;
+  color: aliceblue;
 }
