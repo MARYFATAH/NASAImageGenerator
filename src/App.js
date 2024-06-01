@@ -4,7 +4,7 @@ import FetchImage from './FetchImage';
 import './App.css'
 
 const App = () => {
-  console.log("app is loaded.");
+  console.log("app is loaded");
   return (
     <div>
       <FetchImage />
